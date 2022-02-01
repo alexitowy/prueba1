@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GithubService } from './services/github.service';
-
+/**
+ * @exports
+ * @class AppComponent
+ */
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,13 +23,22 @@ export class AppComponent implements OnInit{
     this.buildForm();
   }
 
+  /**
+   * @description this method build form for search
+   * @returns void
+   * @memberof AppComponent
+   */
   buildForm(): void {
     this.formSearch = this.formBuilder.group({
       q: ['', Validators.required],
       star: ['', Validators.required]
     });
   }
-
+  /**
+   * @description this method check if valid form, and if valid send search to service
+   * @returns void
+   * @memberof AppComponent
+   */
   onSubmit(): void {
     if(!this.formSearch.valid) {
       return;
