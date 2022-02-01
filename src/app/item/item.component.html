@@ -1,0 +1,15 @@
+<div class="container__card">
+    <div class="container__card_image">
+        <img [src]="item.owner.avatar_url" [alt]="item.owner.login" />
+    </div>
+    <div class="container__card_detail">
+        <h3>
+            {{ item.name }}
+        </h3>
+        <p class="star">
+            <span>★</span>
+            {{ item.stargazers_count }}
+        </p>
+        <p class="owner">@{{ item.owner.login }}</p>
+    </div>
+</div>

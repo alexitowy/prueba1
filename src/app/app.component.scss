@@ -1,0 +1,19 @@
+@use "../theme/settings/variables" as vars;
+.container {
+    .container__form {
+            background-color: vars.$primary;
+            padding: 20px 20px 30px 20px;
+            text-align: center;
+            margin:0 auto;
+    }
+    .view__container {
+        max-width: 800px;
+        width: 100%;
+        margin:0 auto;
+        .view__container__title {
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 20px 0px;
+        }
+    }
+}
