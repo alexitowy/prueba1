@@ -16,6 +16,14 @@ describe('ItemComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ItemComponent);
     component = fixture.componentInstance;
+    component.item = {
+      owner: {
+        avatar_url: '',
+        login: ''
+      },
+      name: 'Demo',
+      stargazers_count: 5
+    };
     fixture.detectChanges();
   });
 
